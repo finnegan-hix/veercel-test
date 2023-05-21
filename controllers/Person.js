@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const user = await new Person(req.body).save()
+        const person = await new Person(req.body).save()
         res.json(person)
     } catch (error) {
         console.log('error creating person', error)
